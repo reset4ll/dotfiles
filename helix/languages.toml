@@ -1,0 +1,61 @@
+# Este contenido VA en languages.toml, NO en config.toml
+inlay-hints = false # Desactivado para evitar las indicaciones del LSP
+
+[[language]]
+name = "python"
+language-servers = [ "basedpyright", "ruff" ]
+auto-format = true
+
+[language-server.basedpyright]
+command = "basedpyright-langserver"
+args = ["--stdio"]
+
+[language-server.ruff]
+command = "ruff"
+args = ["server"]
+
+# --- C / C++ (Usando clangd) ---
+[[language]]
+name = "cpp"
+language-servers = [ "clangd" ]
+auto-format = true
+
+[[language]]
+name = "c"
+language-servers = [ "clangd" ]
+auto-format = true
+
+[language-server.clangd]
+command = "clangd"
+args = ["--background-index", "--clang-tidy", "--header-insertion=never"]
+
+# --- JAVASCRIPT / TYPESCRIPT ---
+[[language]]
+name = "javascript"
+language-servers = [ "typescript-language-server" ]
+auto-format = true
+
+[language-server.typescript-language-server]
+command = "typescript-language-server"
+args = ["--stdio"]
+config = { "javascript" = { "format" = { "semicolons" = "insert" } } }
+
+# --- GO ---
+[[language]]
+name = "go"
+language-servers = [ "gopls" ]
+auto-format = true
+
+[language-server.gopls]
+command = "gopls"
+# Configuración para que Go sea más inteligente al editar
+config = { "build.buildFlags" = ["-tags=unit"], "formatting.gofumpt" = true }
+
+# --- MARKDOWN ---
+[[language]]
+name = "markdown"
+language-servers = [ "marksman" ]
+
+[language-server.marksman]
+command = "marksman"
+args = ["server"]

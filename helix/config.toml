@@ -1,0 +1,33 @@
+# theme = "dark_plus"
+theme = "/home/aesteban/.config/helix/themes/tokyonight_moon"
+
+[keys.normal]
+G = "goto_file_end" # vim
+Z = { Z = ":wq", Q = ":q!" } # vim, save and quit, quit without saving
+"#" = "toggle_comments"
+C-s = ":w"
+
+[keys.insert]
+j = { k = "normal_mode" }
+C-s = ":w"
+
+[keys.select]
+G = "goto_file_end" # vim
+
+[editor.cursor-shape]
+insert = "bar" # change cursor shape in insert mode
+
+[editor.file-picker]
+hidden = false # don't ignore hidden files
+
+[editor]
+line-number = "relative" # Números de línea relativos (estilo Vim)
+cursorline = true
+auto-format = true
+idle-timeout = 200 # Hace que los menús de ayuda salgan más rápido
+
+[editor.lsp]
+display-messages = true
+display-inlay-hints = false # Muestra tipos de variables en pantalla (muy útil en C++ y Go)
+
+
