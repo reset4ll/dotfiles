@@ -4,11 +4,16 @@ github:reset4ll
 
 *_Dotfiles settings, Feb 2026._*
 
-- [big]##A##lacritty. +
-- [big]##E##macs. +
-- [big]##G##edit. +
-- [big]##H##elix. +
-- [big]##K##itty. +
-- [big]##N##eovim. +
-- [big]##T##mux. +
-- [big]##Z##athura.
+[Note]
+====
+
+- [x] [big]##A##lacritty. 
+- [x] [big]##E##macs. 
+- [x] [big]##G##edit. 
+- [x] [big]##H##elix. 
+- [x] [big]##K##itty. 
+- [x] [big]##N##eovim. 
+- [x] [big]##T##mux. 
+- [x] [big]##Z##athura. 
+
+====
