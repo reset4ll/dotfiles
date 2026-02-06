@@ -7,7 +7,7 @@
 [Note]
 ====
 
-[x] - [big]##A##lacritty. 
+- [x] [big]##A##lacritty. 
 - [x] [big]##E##macs. 
 - [x] [big]##G##edit. 
 - [x] [big]##H##elix. 
