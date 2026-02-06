@@ -1,4 +1,4 @@
-= Dotfiles Backup on _Github_.
+= Dotfiles Backup on _Github._ footnote:[Just for need & fun.]
 github:reset4ll
 :description: My dotfiles settings, Feb 2026.
 
