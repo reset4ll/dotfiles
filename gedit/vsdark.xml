@@ -1,6 +1,5 @@
-<!-- ubicación: "/usr/share/libgedit-gtksourceview-300/styles/" -->
-
 <?xml version="1.0" encoding="UTF-8"?>
+
 <style-scheme id="vsdark" _name="VSdark" kind="dark">
   <_description>Visual Studio based color scheme</_description>
 
@@ -13,8 +12,8 @@
 	<color name="error_color" value="#ff3333"/>
 	<color name="text_fg" value="#ffffff"/>
 	<color name="text_bg" value="#1e1e1e"/>
-	<color name="line_highlight" value="#0f0f0f"/>
-	<color name="line_numbers" value="#2b91af"/>
+	<color name="line_highlight" value="#1c2917"/>
+	<color name="line_numbers" value="#608b4e"/>
 	<color name="selection_color" value="#264f78"/>
 	
 
