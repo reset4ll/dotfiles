@@ -14,6 +14,7 @@
 - [x] [big]##K##itty. 
 - [x] [big]##N##eovim. 
 - [x] [big]##T##mux. 
+- [x] [big]##YT##-dlp
 - [x] [big]##Z##athura. 
 
 ====
