@@ -3,12 +3,15 @@
 --
 -- See the kickstart.nvim README for more information
 
+-- example lazy.nvim install setup
 return {
- {
-  "funnyVariable/blank.nvim",
-  lazy = false,
-  priority = 1000,
+{
+  "oskarnurm/koda.nvim",
+  lazy = false, -- make sure we load this during startup if it is your main colorscheme
+  priority = 1000, -- make sure to load this before all the other start plugins
   config = function()
-    vim.cmd("colorscheme blank")
+    -- require("koda").setup({ transparent = true })
+    vim.cmd("colorscheme koda")
   end,
+}
 }
