@@ -49,9 +49,22 @@
   (doom-modeline-mode 1))
 
 ;; Temas
-(use-package doom-themes
+;;(use-package doom-themes
+;;  :config
+;;  (load-theme 'doom-tokyo-night t))
+
+;;; For packaged versions which must use `require'.
+(use-package modus-themes
+  :ensure t
   :config
-  (load-theme 'doom-tokyo-night t))
+  ;; Add all your customizations prior to loading the themes
+  (setq modus-themes-italic-constructs t
+        modus-themes-bold-constructs nil)
+
+  ;; Load the theme of your choice.
+  (modus-themes-load-theme 'modus-vivendi-tritanopia)
+
+  (define-key global-map (kbd "<f5>") #'modus-themes-toggle))
 
 ;; -------------------------
 ;; Evil (Vim modal editing)
@@ -191,17 +204,21 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(column-number-mode t)
+ '(custom-safe-themes
+   '("1b7e575c6681e66d8d83634c2c160b40af12f3756360a4dd81b8032f4495cb5e"
+     default))
  '(global-display-line-numbers-mode t)
  '(package-selected-packages
    '(adoc-mode corfu doom-modeline doom-themes edit-indirect
-               evil-collection magit markdown-mode org tree-sitter
-               vertico)))
+               evil-collection magit markdown-mode modus-themes org
+               tree-sitter vertico)))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Fira Code Retina" :foundry "CTDB" :slant normal :weight normal :height 151 :width normal)))))
+ '(default ((t (:family "Fira Code" :foundry "CTDB" :slant normal :weight normal :height 151 :width normal)))))
 
 ;;; init.el ends here
+
