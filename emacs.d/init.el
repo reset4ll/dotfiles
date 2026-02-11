@@ -62,7 +62,7 @@
         modus-themes-bold-constructs nil)
 
   ;; Load the theme of your choice.
-  (modus-themes-load-theme 'modus-vivendi-tritanopia)
+  (modus-themes-load-theme 'modus-vivendi-tinted)
 
   (define-key global-map (kbd "<f5>") #'modus-themes-toggle))
 
