@@ -1,4 +1,4 @@
-;;; init.el --- Emacs 30.2 + Evil + LSP -*- lexical-binding: t; -*-
+;; init.el --- Emacs 30.2 + Evil + LSP -*- lexical-binding: t; -*-
 
 ;; ---------------------------
 ;; Configuración básica
@@ -60,7 +60,7 @@
   ;; Add all your customizations prior to loading the themes
   (setq modus-themes-italic-constructs t
         modus-themes-bold-constructs nil)
-
+       
   ;; Load the theme of your choice.
   (modus-themes-load-theme 'modus-vivendi-tinted)
 
