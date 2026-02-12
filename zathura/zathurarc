@@ -1,5 +1,5 @@
 # NORD THEME
-set default-bg              "#222436" # tokyonight
+set default-bg              "#21252d" # onedark
 set default-fg              "#d8dee9" # nord4
 set statusbar-bg            "#2e3440" # nord0
 set statusbar-fg            "#d8dee9" # nord4
@@ -24,17 +24,18 @@ set index-fg                "#d8dee9" # nord4
 set index-active-bg         "#434c5e" # nord2
 set index-active-fg         "#d8dee9" # nord4
 set recolor-darkcolor       "#d8dee9" # nord4
-set recolor-lightcolor      "#222436" # tokyonight
+set recolor-lightcolor      "#21252d" # onedark 222436 - 21252D
 set render-loading-bg       "#2e3440" # nord0
 set render-loading-fg       "#d8dee9" # nord4set default-bg "#000000" #00
 set default-fg "#F7F7F6" #01
 
-set font "JetBrainsMono Nerd Font Mono Bold 14"
+#set font "JetBrainsMono Nerd Font Mono Bold 14"
+set font "Fira code Retina 14"
 set smooth-scroll true
 set scroll-page-aware true
 set scroll-step 50
 
-set recolor false
+set recolor true
 set render-loading false
 set adjust-open best-fit
 set page-padding 1
