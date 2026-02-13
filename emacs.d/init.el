@@ -211,7 +211,7 @@
  '(package-selected-packages
    '(adoc-mode corfu doom-modeline doom-themes edit-indirect
                evil-collection magit markdown-mode modus-themes org
-               tree-sitter vertico)))
+               tree-sitter typst-preview vertico)))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
