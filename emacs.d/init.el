@@ -209,9 +209,9 @@
      default))
  '(global-display-line-numbers-mode t)
  '(package-selected-packages
-   '(adoc-mode corfu doom-modeline doom-themes edit-indirect
+   '(adoc-mode auto-org-md corfu doom-modeline doom-themes edit-indirect
                evil-collection magit markdown-mode modus-themes org
-               tree-sitter typst-preview vertico)))
+               ox-epub ox-typst tree-sitter typst-preview vertico)))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
