@@ -48,23 +48,13 @@
   :config
   (doom-modeline-mode 1))
 
-;; Temas
-;;(use-package doom-themes
-;;  :config
-;;  (load-theme 'doom-tokyo-night t))
+;; -------
+;;  Temas
+;; -------
+(add-to-list 'custom-theme-load-path
+             "/home/aesteban/.emacs.d/themes/")
 
-;;; For packaged versions which must use `require'.
-(use-package modus-themes
-  :ensure t
-  :config
-  ;; Add all your customizations prior to loading the themes
-  (setq modus-themes-italic-constructs t
-        modus-themes-bold-constructs nil)
-       
-  ;; Load the theme of your choice.
-  (modus-themes-load-theme 'modus-vivendi-tinted)
-
-  (define-key global-map (kbd "<f5>") #'modus-themes-toggle))
+(load-theme 'sexy-monochrome t)
 
 ;; -------------------------
 ;; Evil (Vim modal editing)
@@ -205,13 +195,14 @@
  ;; If there is more than one, they won't work right.
  '(column-number-mode t)
  '(custom-safe-themes
-   '("1b7e575c6681e66d8d83634c2c160b40af12f3756360a4dd81b8032f4495cb5e"
+   '("a5e8ac34fe43455e6eb3b6267b74e9454de4c40ac28a6012a663b876a880bbf2"
+     "1b7e575c6681e66d8d83634c2c160b40af12f3756360a4dd81b8032f4495cb5e"
      default))
  '(global-display-line-numbers-mode t)
  '(package-selected-packages
    '(adoc-mode auto-org-md corfu doom-modeline doom-themes edit-indirect
-               evil-collection magit markdown-mode modus-themes org
-               ox-epub ox-typst tree-sitter typst-preview vertico)))
+               evil-collection magit markdown-mode org ox-epub
+               ox-typst tree-sitter typst-preview vertico)))
 
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
