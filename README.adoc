@@ -8,6 +8,7 @@
 ====
 
 - [x] [big]##A##lacritty. 
+- [X} [big]##D##oom.
 - [x] [big]##E##macs. 
 - [x] [big]##G##edit. 
 - [x] [big]##H##elix. 
