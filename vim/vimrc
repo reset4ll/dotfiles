@@ -18,7 +18,7 @@ endif
 
 let g:vim_bootstrap_langs = "c"
 let g:vim_bootstrap_editor = "vim"				" nvim or vim
-let g:vim_bootstrap_theme = "codedark"
+let g:vim_bootstrap_theme = "onedark"
 let g:vim_bootstrap_frames = ""
 
 if !filereadable(vimplug_exists)
@@ -55,7 +55,6 @@ Plug 'dense-analysis/ale'
 Plug 'Yggdroot/indentLine'
 Plug 'editor-bootstrap/vim-bootstrap-updater'
 Plug 'tpope/vim-rhubarb' " required by fugitive to :Gbrowse
-Plug 'tomasiser/vim-code-dark'
 Plug 'frazrepo/vim-rainbow'
 Plug 'ntpeters/vim-better-whitespace'
 Plug 'rust-lang/rust.vim'
@@ -66,9 +65,10 @@ Plug 'cofyc/vim-uncrustify'
 Plug 'vim-scripts/indentpython.vim'
 "Plug 'kyoz/purify', { 'rtp': 'vim' }
 "Plug 'morhetz/gruvbox'
-"Plug 'joshdick/onedark.vim'
-"Plug 'arcticicestudio/nord-vim'
+Plug 'joshdick/onedark.vim'
 "Plug 'sainnhe/gruvbox-material'
+"Plug 'tomasiser/vim-code-dark'
+
 
 if isdirectory('/usr/local/opt/fzf')
   Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
@@ -163,15 +163,20 @@ syntax enable
 set ruler
 set relativenumber
 set cursorline
+set showcmd
 "set guicursor+=n:hor10-Cursor/lCursor
 "set timeout timeoutlen=3000 ttimeoutlen=100
 let no_buffers_menu=1
-let g:codedark_italics = 1  " comentarios en itálica
+"" let g:codedark_italics = 1  " comentarios en itálica
 let g:onedark_termcolors=256
 set background=dark
-colorscheme codedark
-set showcmd
-" Funciona bien
+
+"" ================
+"" onedark colorscheme
+"" ================
+
+" Load the colorscheme
+colorscheme onedark
 
 "+++++++++++++++++++++++++++
 " Cambia ESC to CapsLock Key
