@@ -949,6 +949,7 @@ require('lazy').setup({
   },
 })
 
+-- colorscheme `nord`
 vim.cmd[[colorscheme nord]]
 
 -- The line beneath this is called `modeline`. See `:help modeline`
