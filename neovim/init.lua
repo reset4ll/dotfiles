@@ -208,6 +208,22 @@ require('lazy').setup({
   {
   'habamax/vim-asciidoctor'
   },
+  
+  -- Claude AI
+  -- Prerequisito: `npm install -g @anthropic-ai/claude-code`
+  {
+  "coder/claudecode.nvim",
+  dependencies = { "folke/snacks.nvim" },
+  config = true,
+  keys = {
+    { "<leader>ac", "<cmd>ClaudeCode<cr>",       desc = "Toggle Claude" },
+    { "<leader>af", "<cmd>ClaudeCodeFocus<cr>",  desc = "Focus Claude" },
+    { "<leader>ab", "<cmd>ClaudeCodeAdd %<cr>",  desc = "Add buffer actual" },
+    { "<leader>as", "<cmd>ClaudeCodeSend<cr>",   mode = "v", desc = "Enviar selección" },
+    { "<leader>aa", "<cmd>ClaudeCodeDiffAccept<cr>", desc = "Aceptar diff" },
+    { "<leader>ad", "<cmd>ClaudeCodeDiffDeny<cr>",   desc = "Rechazar diff" },
+  },
+},
   -- Org-mode plugin settings
   {
   'nvim-orgmode/orgmode',
