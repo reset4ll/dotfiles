@@ -1,6 +1,6 @@
 # NORD THEME
 set default-bg              "#21252d" # onedark
-set default-fg              "#d8dee9" # nord4
+set default-fg              "#000000" # nord4 #d8dee9
 set statusbar-bg            "#2e3440" # nord0
 set statusbar-fg            "#d8dee9" # nord4
 set inputbar-bg             "#2e3440" # nord0
@@ -26,7 +26,7 @@ set index-active-fg         "#d8dee9" # nord4
 set recolor-darkcolor       "#d8dee9" # nord4
 set recolor-lightcolor      "#21252d" # onedark 222436 - 21252D
 set render-loading-bg       "#2e3440" # nord0
-set render-loading-fg       "#d8dee9" # nord4set default-bg "#000000" #00
+set render-loading-fg       "#000000" # nord4set default-bg "#000000" 
 set default-fg "#F7F7F6" #01
 
 #set font "JetBrainsMono Nerd Font Mono Bold 14"
