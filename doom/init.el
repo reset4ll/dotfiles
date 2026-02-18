@@ -118,7 +118,7 @@
        ;;ada               ; In strong typing we (blindly) trust
        ;;agda              ; types of types of types of types...
        ;;beancount         ; mind the GAAP
-       (cc +lsp)         ; C > C++ == 1
+       (cc +lsp +tree-sitter)         ; C > C++ == 1
        ;;clojure           ; java with a lisp
        ;;common-lisp       ; if you've seen one lisp, you've seen them all
        ;;coq               ; proofs-as-programs
@@ -138,14 +138,14 @@
        ;;fsharp            ; ML stands for Microsoft's Language
        ;;fstar             ; (dependent) types and (monadic) effects and Z3
        ;;gdscript          ; the language you waited for
-       ;;(go +lsp)         ; the hipster dialect
+       (go +lsp +treesitter)         ; the hipster dialect
        ;;(graphql +lsp)    ; Give queries a REST
        ;;(haskell +lsp)    ; a language that's lazier than I am
        ;;hy                ; readability of scheme w/ speed of python
        ;;idris             ; a language you can depend on
        ;;json              ; At least it ain't XML
        ;;janet             ; Fun fact: Janet is me!
-       (java +lsp)       ; the poster child for carpal tunnel syndrome
+       ;;(java +lsp)       ; the poster child for carpal tunnel syndrome
        (javascript +tree-sitter +lsp)        ; all(hope(abandon(ye(who(enter(here))))))
        (typescript +tree-sitter +lsp)        ; typescript
        ;;julia             ; a better, faster MATLAB
@@ -163,7 +163,7 @@
        ;;plantuml          ; diagrams for confusing people more
        ;;graphviz          ; diagrams for confusing yourself even more
        ;;purescript        ; javascript, but functional
-       python            ; beautiful is better than ugly
+       (python +lsp +tree-sitter)            ; beautiful is better than ugly
        ;;qt                ; the 'cutest' gui framework ever
        ;;racket            ; a DSL for DSLs
        ;;raku              ; the artist formerly known as perl6
@@ -180,7 +180,7 @@
        ;;terra             ; Earth and Moon in alignment for performance.
        ;;web               ; the tubes
        ;;yaml              ; JSON, but readable
-       ;;zig               ; C, but simpler
+       (zig +lsp +tree-sitter)               ; C, but simpler
 
        :email
        ;;(mu4e +org +gmail)
