@@ -1,5 +1,5 @@
 # NORD THEME
-set default-bg              "#21252d" # onedark
+set default-bg              "#1e1e1e" # onedark
 set default-fg              "#000000" # nord4 #d8dee9
 set statusbar-bg            "#2e3440" # nord0
 set statusbar-fg            "#d8dee9" # nord4
@@ -24,7 +24,7 @@ set index-fg                "#d8dee9" # nord4
 set index-active-bg         "#434c5e" # nord2
 set index-active-fg         "#d8dee9" # nord4
 set recolor-darkcolor       "#d8dee9" # nord4
-set recolor-lightcolor      "#21252d" # onedark 222436 - 21252D
+set recolor-lightcolor      "#1e1e1e" # onedark 21252d - 222436 - 21252D
 set render-loading-bg       "#2e3440" # nord0
 set render-loading-fg       "#000000" # nord4set default-bg "#000000" 
 set default-fg "#F7F7F6" #01
