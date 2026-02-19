@@ -209,6 +209,11 @@ require('lazy').setup({
   'habamax/vim-asciidoctor'
   },
   
+   -- 0X0carbon theme
+   {
+   "nyoom-engineering/oxocarbon.nvim"
+   },
+  
   -- Claude AI
   -- Prerequisito: `npm install -g @anthropic-ai/claude-code`
   {
@@ -966,18 +971,32 @@ require('lazy').setup({
   },
 })
 
-vim.cmd[[colorscheme nord]]
+-- /// Begins Nord theme ///
+-- Activar el pluginpreviamente en carpeta `custom`.
+
+--vim.cmd[[colorscheme nord]]
 
 -- settings `nord` theme
-vim.g.nord_contrast = true
-vim.g.nord_borders = false
-vim.g.nord_disable_background = false
-vim.g.nord_italic = true
-vim.g.nord_uniform_diff_background = true
-vim.g.nord_bold = false
+--vim.g.nord_contrast = true
+--vim.g.nord_borders = false
+--vim.g.nord_disable_background = false
+--vim.g.nord_italic = true
+--vim.g.nord_uniform_diff_background = true
+--vim.g.nord_bold = false
 
 -- Load the colorscheme
-require('nord').set()
+-- require('nord').set()
+
+-- /// Ends Nord theme ///
+
+-- Set 0X0carrbon theme
+vim.opt.background = "dark" -- set this to dark or light
+vim.cmd("colorscheme oxocarbon")
+
+-- settings 0X0carbon
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" })
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
