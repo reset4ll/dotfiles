@@ -11,6 +11,7 @@
 - [x] [big]##D##oom.
 - [x] [big]##E##macs. 
 - [x] [big]##G##edit. 
+- [x] [big]##G##hostty.
 - [x] [big]##H##elix. 
 - [x] [big]##K##itty. 
 - [x] [big]##N##eovim. 
