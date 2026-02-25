@@ -13,6 +13,14 @@
 ;; To install SOME-PACKAGE from MELPA, ELPA or emacsmirror:
 ;; (package! some-package)
 
+;; Org-roam packages
+(package! org-roam)
+(package! emacsql)
+(package! magit-section)
+(package! sqlite3)
+;; autosync db
+;;(org-roam-db-autosync-mode)
+
 ;; Install ClaudeCode AI
 (package! claude-code-ide
   :recipe (:host github :repo "manzaltu/claude-code-ide.el"))
