@@ -6,8 +6,8 @@
  ;; If there is more than one, they won't work right.
  '(package-selected-packages '(emacsql magit-section))
  '(safe-local-variable-directories
-   '("/home/aesteban/org/worg/" "/home/aesteban/.config/doom/"
-     "/home/aesteban/.config/emacs/")))
+   '("/home/my-user/org/worg/" "/home/aesteban/.config/doom/"
+     "/home/my-user/.config/emacs/")))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
