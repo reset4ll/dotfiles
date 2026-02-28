@@ -15,9 +15,11 @@
 
 ;; Org-roam packages
 (package! org-roam)
+(package! org-bullets)
 (package! emacsql)
 (package! magit-section)
 (package! sqlite3)
+
 ;; autosync db
 ;;(org-roam-db-autosync-mode)
 
