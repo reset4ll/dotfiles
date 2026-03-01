@@ -15,10 +15,12 @@
 
 ;; Org-roam packages
 (package! org-roam)
-(package! org-bullets)
 (package! emacsql)
 (package! magit-section)
 (package! sqlite3)
+
+;; Org-mode bullets -- Pretify lists in org-mode
+(package! org-superstar)
 
 ;; autosync db
 ;;(org-roam-db-autosync-mode)

@@ -21,8 +21,15 @@
 ;; See 'C-h v doom-font' for documentation and more examples of what they
 ;; accept. For example:
 ;;
-(setq doom-font (font-spec :family "Fira Code" :size 20 :weight 'regular))
-;;      doom-variable-pitch-font (font-spec :family "Fira Sans" :size 13))
+(setq doom-font (font-spec :family "Fira Code" :size 20 :weight 'regular)
+      doom-variable-pitch-font (font-spec :family "Noto Sans" :size 13)
+      doom-symbol-font (font-spec :family "Symbola"))
+
+;; org-superstar settings -- pretify org-mode lists
+(use-package! org-superstar
+  :hook (org-mode . org-superstar-mode)
+  :config
+  (setq org-superstar-headline-bullets-list '("◉" "○" "●" "◆" "•")))
 
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
