@@ -984,10 +984,7 @@ require('lazy').setup({
 -- require('nord').set()
 
 -- Set colorscheme 'habamax'
--- vim.cmd("colorscheme codedark")
-
--- Set colorscheme 'onedark'
-require('onedark').load()
+vim.cmd("colorscheme codedark")
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
