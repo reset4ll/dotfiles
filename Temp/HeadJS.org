@@ -15,7 +15,7 @@ Análisis del libro `Head First Javascript Programming, 2nd Ed.` de Oreilly.
 <html lang="eng">
     <head>
         <meta charset="utf-8">
-        <tittle>Your HTML Page</tittle>
+        <title>Your HTML Page</title>
         <script>
              <-------  [JS CODE, HERE]
         </script>
@@ -60,7 +60,7 @@ if (dog.weight > 30) {
 // Crea una variable de tipo constante llamada `dog` con dos propiedades: `name` y `weight`. Si `weight` es mayor de 30 emite una alerta en mayúsculas, de lo contrario, emite otra en minúsculas.
 
 let circleRadius = 20;
-let circleArea = MATH.PI * (circleRadius * circleRadius);
+let circleArea = Math.PI * (circleRadius * circleRadius);
 // Crea la variable `circleRadius` y le asigna el valor de `20` y otra variable `circleArea` a la que le asigna el valor del resultado de la expresión `PI` que contiene la biblioteca de JS `MATH` con el valor de `circleRadius` al cuadrado.
 
 #+end_src
