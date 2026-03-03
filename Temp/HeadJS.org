@@ -38,7 +38,7 @@ let price = 28.99;
 let discount = 10;
 // Crea una variable llamada `discount` y le asigna el valor de `10`
 
-let total = price - (price * (discount / 100);
+let total = price - (price * (discount / 100));
 // Crea una variable llamada `total` y le asigna el valor del resultado afectado por la expresión.
 
 if (total > 25) { freeShipping(); }
