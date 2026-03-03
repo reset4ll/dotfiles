@@ -1,0 +1,66 @@
+#+TITLE: HeadJS.org
+#+DATE: Marzo, 2026
+#+STARTUP: hidden
+#+STARTUP: indent
+#+BEGIN_COMMENT
+Análisis del libro `Head First Javascript Programming, 2nd Ed.` de Oreilly.
+#+END_COMMENT
+
+* Intro -- Pag xxxi
+- HTML Template:
+
+  #+begin_src html
+
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="utf-8">
+        <tittle>Your HTML Page</tittle>
+        <script>
+             <-------  [JS CODE, HERE]
+        </script>
+    </head>
+    <body>
+        <------------  [WEB CONTENT, HERE]
+    </body>
+</html>
+
+  #+end_src
+
+* Chapter 01 -- Pag 06
+- Look how easy it is to write Javascript:
+
+#+begin_src javascript
+
+let price = 28.99;
+// Crea una variable llamada `price` y le asigna el valor de `28.99`
+
+let discount = 10;
+// Crea una variable llamada `discount` y le asigna el valor de `10`
+
+let total = price - (price * (discount / 100);
+// Crea una variable llamada `total` y le asigna el valor del resultado afectado por la expresión.
+
+if (total > 25) { freeShipping(); }
+// Expresión condicional en donde se aplica la función si el valor de `total` es superior a `25`
+
+let count = 10;
+while (count > 0) {
+    juggle();
+    count = count - 1;
+}
+// Crea una variable `count` y le asigna el valor de `10`. Mientras el valor de dicha variable sea superior a `0` se le aplica la función `juggle()` y decrementa el valor de la variable una unidad.
+
+const dog = {name: "Rover", weight: 35};
+if (dog.weight > 30) {
+    alert("WOOF WOOF");
+} else {
+    alert("woof, woof");
+}
+// Crea una variable de tipo constante llamada `dog` con dos propiedades: `name` y `weight`. Si `weight` es mayor de 30 emite una alerta en mayúsculas, de lo contrario, emite otra en minúsculas.
+
+let circleRadius = 20;
+let circleArea = MATH.PI * (circleRadius * circleRadius);
+// Crea la variable `circleRadius` y le asigna el valor de `20` y otra variable `circleArea` a la que le asigna el valor del resultado de la expresión `PI` que contiene la biblioteca de JS `MATH` con el valor de `circleRadius` al cuadrado.
+
+#+end_src
