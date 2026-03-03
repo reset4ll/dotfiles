@@ -3,7 +3,7 @@
 #+STARTUP: hidden
 #+STARTUP: indent
 #+BEGIN_COMMENT
-Análisis del libro `Head First Javascript Programming, 2nd Ed.` de Oreilly.
+Análisis del capítulo 1 del libro `Head First Javascript Programming, 2nd Ed.` de Oreilly.
 #+END_COMMENT
 
 * Intro -- Pag xxxi
@@ -61,6 +61,67 @@ if (dog.weight > 30) {
 
 let circleRadius = 20;
 let circleArea = Math.PI * (circleRadius * circleRadius);
-// Crea la variable `circleRadius` y le asigna el valor de `20` y otra variable `circleArea` a la que le asigna el valor del resultado de la expresión `PI` que contiene la biblioteca de JS `MATH` con el valor de `circleRadius` al cuadrado.
+// Crea la variable `circleRadius` y le asigna el valor de `20` y otra variable `circleArea` a la que le asigna el valor del resultado de la expresión `PI` que contiene la biblioteca de JS `Math` con el valor de `circleRadius` al cuadrado.
+
+#+end_src
+
+* Chapter 1 -- pag 13
+- Sharpen your pencil: Identifica las declaraciones de abajo que crees que son las más idóneas para `let y`const`.
+
+#+begin_src javascript
+
+const DISTANCE_TO_MOON = 238_900;
+let last_guess = 0;
+const SCREE_WIDTH = 100;
+const firstUSPresident = "Washington";
+let fluxCapacitorReading = "System Normal"
+
+#+end_src
+
+* Chapter 1 -- pag 15
+- Be the browser: Debajo, encontrarás código Javascript con algunos errores en él. Tu trabajo es jugar a ser el navegador y encontrar los erroes dentro del código.
+
+#+begin_src javascript
+
+// (A) Test for jokes
+const joke = "Javascript walked into a bar..."; // Ok
+
+let toldJoke = "false"; // error " " -> false
+
+let $punchline = "Better watch out for those semi-colons."; // error '$' -> let punchline = ...
+
+let %entage = 20; // error '%' -> entage
+
+let result // error -> let result;
+
+if (toldJoke == true) {
+    Alert($punchline); // error -> alert(punchline);
+} else {
+    alert(joke);
+    }
+}
+
+joke = "Knock, knock... "; // error, joke es `const`
+
+// (B) Movie Night
+let zip code = 98104; // error -> let zipCode ó let zip_code
+
+const joesFavoriteMovie = Forbidden Planet; // error -> eliminar (') y su valor de cadena es "Forbidden Planet";
+
+let movieTicket$   =   9; // Ok
+
+if (movieTicket$ >= 9) {
+    alert("Too much!");
+} else {
+    alert("We're going to see " + joesFavoriteMovie);
+    }
+}
+
+#+end_src
+
+* Chapter 01 -- pag 18
+- Sharpen your pencil: Para cada expresión de abajo, computar su valor y escribir las respuestas.
+
+#+begin_src javascript
 
 #+end_src
