@@ -90,7 +90,7 @@ let toldJoke = "false"; // error " " -> false
 
 let $punchline = "Better watch out for those semi-colons."; // error '$' -> let punchline = ...
 
-let entage = 20; // error '%' -> entage
+let %entage = 20; // error '%' -> entage
 
 let result // error -> let result;
 
