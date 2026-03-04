@@ -9,7 +9,7 @@
 * Intro -- Pag xxxi <2026-03-04 mié> :book:intro:
 - HTML Template:
 
-#+BEGIN_SRC html:%
+#+BEGIN_SRC html
 <!DOCTYPE html>
 <html lang="eng">
     <head>
@@ -69,7 +69,7 @@ const DISTANCE_TO_MOON = 238_900;
 let last_guess = 0;
 const SCREE_WIDTH = 100;
 const firstUSPresident = "Washington";
-let fluxCapacitorReading = "System Normal"
+let fluxCapacitorReading = "System Normal";
 #+END_SRC
 
 * Chapter 1 -- pag 15 <2026-03-04 mié> :book:chapter:
@@ -92,10 +92,9 @@ let entage = 20;
 let result;
 
 if (toldJoke == true) {
-    Alert($punchline); // error -> `alert($punchline);` -- Mejor `alert(punchline)`;
+    Alert($punchline); // error -> `alert(punchline);` (sin el símbolo `$`)
 } else {
     alert(joke);
-  }
 }
 
 joke = "Knock, knock... "; // error, joke es `const`
@@ -113,7 +112,6 @@ if (movieTicket$ >= 9) {  // Ok
     alert("Too much!");
 } else {
     alert("We're going to see " + joesFavoriteMovie);
-  }
 }
 #+END_SRC
 
