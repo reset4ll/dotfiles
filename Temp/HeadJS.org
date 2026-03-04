@@ -1,9 +1,8 @@
 #+TITLE: HeadJS-ch01.org
 #+DATE: <2026-03-04 mié>
-#+STARTUP: hidden
-#+STARTUP: indent
+#+STARTUP: fold indent
 #+BEGIN_COMMENT
-: Análisis del capítulo 1 del libro `Head First Javascript Programming, 2nd Ed.` de Oreilly.
+: Análisis del capítulo 01 del libro `Head First Javascript Programming, 2nd Ed.` de Oreilly.
 #+END_COMMENT
 
 * Intro -- Pag xxxi <2026-03-04 mié> :book:intro:
@@ -44,7 +43,7 @@ if (total > 25) { freeShipping(); }
 let count = 10;
 while (count > 0) {
     juggle();
-    count = count - 1;
+    count = count - 1; // count--;
 }
 // Crea una variable `count` y le asigna el valor de `10`. Mientras el valor de dicha variable sea superior a `0` se le aplica la función `juggle()` y decrementa el valor de la variable una unidad.
 
@@ -54,25 +53,29 @@ if (dog.weight > 30) {
 } else {
     alert("woof, woof");
 }
-// Crea una variable de tipo constante llamada `dog` con dos propiedades: `name` y `weight`. Si `weight` es mayor de 30 emite una alerta en mayúsculas, de lo contrario, emite otra en minúsculas.
+// Crea una variable de tipo constante llamada `dog` con dos propiedades: `name` y `weight`. Si `weight` es mayor de `30` emite una alerta en mayúsculas, de lo contrario, emite otra en minúsculas.
 
 let circleRadius = 20;
 let circleArea = Math.PI * (circleRadius * circleRadius);
-// Crea la variable `circleRadius` y le asigna el valor de `20` y otra variable `circleArea` a la que le asigna el valor del resultado de la expresión `PI` que contiene la biblioteca de JS `Math` con el valor de `circleRadius` al cuadrado.
+// Crea la variable `circleRadius` y le asigna el valor de `20` y otra variable `circleArea` a la que le asigna el valor del resultado de la expresión `PI` que contiene la biblioteca de Javascript `Math` con el valor de `circleRadius` elevado al cuadrado.
 #+END_SRC
 
-* Chapter 1 -- pag 13 <2026-03-04 mié> :book:chapter:
+* Chapter 01 -- pag 13 <2026-03-04 mié> :book:chapter:
 - Sharpen your pencil: Identificar las declaraciones de abajo que sean las más idóneas para `let y`const`.
 
 #+BEGIN_SRC javascript
 const DISTANCE_TO_MOON = 238_900;
+
 let last_guess = 0;
+
 const SCREE_WIDTH = 100;
+
 const firstUSPresident = "Washington";
+
 let fluxCapacitorReading = "System Normal";
 #+END_SRC
 
-* Chapter 1 -- pag 15 <2026-03-04 mié> :book:chapter:
+* Chapter 01 -- pag 15 <2026-03-04 mié> :book:chapter:
 - Be the browser: Debajo se encuentran expresiones de código Javascript con algunos errores en él. Simulando ser el navegador, encontrar los erroes dentro del código.
 
 #+BEGIN_SRC javascript
@@ -101,7 +104,7 @@ joke = "Knock, knock... "; // error, joke es `const`
 
 // (B) Movie Night
 // let zip code = 98104;
-let zipCode = 98104; // También `let zipCode = 98104;`
+let zipCode = 98104; // También `let zip_code = 98104;`
 
 // const joesFavoriteMovie = Forbidden Planet;
 const joesFavoriteMovie = "Forbidden Planet";
@@ -119,5 +122,54 @@ if (movieTicket$ >= 9) {  // Ok
 - Sharpen your pencil: Para cada expresión de abajo, computar su valor y escribir las respuestas.
 
 #+BEGIN_SRC javascript
+(9 / 5) * temp + 32
+// Si `temp` tiene el valor de 10, el resultado de la expresión es 50.
+
+color == "orange"
+// Si `color` tiene el valor "pink" -> `false` y si tiene el valor "orange" se avalua a `true`
+
+yourLevel > 5
+// Si `yourLevel` es 2 -> false; si `yourLevel` es 5 -> false; si `yourLevel` es 7 -> true;
+
+(level * points) + bonus
+// Si `level` es 5, `points` es 30000 y `bonus` es 3300 el valor es 153300
+
+color != " orange"
+// Si la variable `color` tiene el valor `pink` se evalua a `true`
+
+1000 + "108"
+// Se evalua a `1000108` por concatenación
 
 #+END_SRC
+
+* Chapter 01 -- pag 26 <2026-03-04 mié> :book:chapter:
+- Code magnets: Ordenar las expresiones para que den lugar a la salida que se muestra.
+
+#+BEGIN_SRC javascript
+let i = 0;
+const name = "Joe";
+
+while (i < 2) {
+  console.log("Happy Birthday to you.");
+  i++;   // i = i + 1;
+}
+console.log("Happy Birthday dear " + name + ",");
+console.log("Happy Birthay to you.");
+#+END_SRC
+
+* Chapter 01 -- pag 28 <2026-03-04 mié> :book:chapter:
+- Who does what?: Relacionar los métodos de comunicación entre el usuario y la página web.
+
+#+BEGIN_QUOTE
+A. `document.write`
+// Insertar algo de texto y código HTML en un documento. Desfasado.
+
+B. `console.log`
+// Para propósitos de depuración. Se puede escribir información en una consola especial del programador.
+
+C. `alert`
+// Método de avisar al usuario de algún evento teniendo éste que darse por avisado tecleando Ok.
+
+D. `document objecto model`
+// Control total de una página; manipulación total del contenido de la misma.
+#+END_QUOTE
