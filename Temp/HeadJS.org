@@ -1,16 +1,15 @@
-#+TITLE: HeadJS.org
-#+DATE: Marzo, 2026
+#+TITLE: HeadJS-ch01.org
+#+DATE: <2026-03-04 mié>
 #+STARTUP: hidden
 #+STARTUP: indent
 #+BEGIN_COMMENT
-Análisis del capítulo 1 del libro `Head First Javascript Programming, 2nd Ed.` de Oreilly.
+: Análisis del capítulo 1 del libro `Head First Javascript Programming, 2nd Ed.` de Oreilly.
 #+END_COMMENT
 
-* Intro -- Pag xxxi
+* Intro -- Pag xxxi <2026-03-04 mié> :book:intro:
 - HTML Template:
 
-  #+begin_src html
-
+#+BEGIN_SRC html:%
 <!DOCTYPE html>
 <html lang="eng">
     <head>
@@ -24,14 +23,12 @@ Análisis del capítulo 1 del libro `Head First Javascript Programming, 2nd Ed.`
         <------------  [WEB CONTENT, HERE]
     </body>
 </html>
+#+END_SRC
 
-  #+end_src
-
-* Chapter 01 -- Pag 06
+* Chapter 01 -- Pag 06 <2026-03-04 mié> :book:chapter:
 - Look how easy it is to write Javascript:
 
-#+begin_src javascript
-
+#+BEGIN_SRC javascript
 let price = 28.99;
 // Crea una variable llamada `price` y le asigna el valor de `28.99`
 
@@ -62,66 +59,67 @@ if (dog.weight > 30) {
 let circleRadius = 20;
 let circleArea = Math.PI * (circleRadius * circleRadius);
 // Crea la variable `circleRadius` y le asigna el valor de `20` y otra variable `circleArea` a la que le asigna el valor del resultado de la expresión `PI` que contiene la biblioteca de JS `Math` con el valor de `circleRadius` al cuadrado.
+#+END_SRC
 
-#+end_src
+* Chapter 1 -- pag 13 <2026-03-04 mié> :book:chapter:
+- Sharpen your pencil: Identificar las declaraciones de abajo que sean las más idóneas para `let y`const`.
 
-* Chapter 1 -- pag 13
-- Sharpen your pencil: Identifica las declaraciones de abajo que crees que son las más idóneas para `let y`const`.
-
-#+begin_src javascript
-
+#+BEGIN_SRC javascript
 const DISTANCE_TO_MOON = 238_900;
 let last_guess = 0;
 const SCREE_WIDTH = 100;
 const firstUSPresident = "Washington";
 let fluxCapacitorReading = "System Normal"
+#+END_SRC
 
-#+end_src
+* Chapter 1 -- pag 15 <2026-03-04 mié> :book:chapter:
+- Be the browser: Debajo se encuentran expresiones de código Javascript con algunos errores en él. Simulando ser el navegador, encontrar los erroes dentro del código.
 
-* Chapter 1 -- pag 15
-- Be the browser: Debajo, encontrarás código Javascript con algunos errores en él. Tu trabajo es jugar a ser el navegador y encontrar los erroes dentro del código.
-
-#+begin_src javascript
-
+#+BEGIN_SRC javascript
 // (A) Test for jokes
 const joke = "Javascript walked into a bar..."; // Ok
 
-let toldJoke = "false"; // error " " -> false
+// let toldJoke = "false";
+let toldJoke = false;
 
-let $punchline = "Better watch out for those semi-colons."; // error '$' -> let punchline = ...
+// let $punchline = "Better watch out for those semi-colons.";
+let $punchline = "Better watch out for those semi-colons.";   // `let punchline...` -- Mejor sin '$', es usado para bibliotecas.
 
-let %entage = 20; // error '%' -> entage
+// let %entage = 20;
+let entage = 20;
 
-let result // error -> let result;
+// let result
+let result;
 
 if (toldJoke == true) {
-    Alert($punchline); // error -> alert(punchline);
+    Alert($punchline); // error -> `alert($punchline);` -- Mejor `alert(punchline)`;
 } else {
     alert(joke);
-    }
+  }
 }
 
 joke = "Knock, knock... "; // error, joke es `const`
 
 // (B) Movie Night
-let zip code = 98104; // error -> let zipCode ó let zip_code
+// let zip code = 98104;
+let zipCode = 98104; // También `let zipCode = 98104;`
 
-const joesFavoriteMovie = Forbidden Planet; // error -> eliminar (') y su valor de cadena es "Forbidden Planet";
+// const joesFavoriteMovie = Forbidden Planet;
+const joesFavoriteMovie = "Forbidden Planet";
 
-let movieTicket$   =   9; // Ok
+let movieTicket$   =   9; // Ok, pero mejor `let movieTicket = 9;`
 
-if (movieTicket$ >= 9) {
+if (movieTicket$ >= 9) {  // Ok
     alert("Too much!");
 } else {
     alert("We're going to see " + joesFavoriteMovie);
-    }
+  }
 }
+#+END_SRC
 
-#+end_src
-
-* Chapter 01 -- pag 18
+* Chapter 01 -- pag 18 <2026-03-04 mié> :book:chapter:
 - Sharpen your pencil: Para cada expresión de abajo, computar su valor y escribir las respuestas.
 
-#+begin_src javascript
+#+BEGIN_SRC javascript
 
-#+end_src
+#+END_SRC
