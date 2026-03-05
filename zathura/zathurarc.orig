@@ -1,0 +1,17 @@
+set recolor true
+set selection-clipboard clipboard
+
+# settings
+set statusbar-page-percent true
+set window-title-page true
+set adjust-open "width"
+
+# input bar
+set statusbar-bg "222436"
+
+# Background color
+set default-bg "#222436"  # Replace with your desired color code
+
+# Page color
+set recolor-lightcolor "#C0C0C0"  # Light color for page background (silver)
+set recolor-darkcolor "#000000"  # Dark color for text
