@@ -9,7 +9,7 @@
 [[./HeadJS.jpg]]
 
 
-* Intro -- Pag xxxi <2026-03-04 mié> :book:intro:
+* Itro -- Pag xxxi <2026-03-04 mié> :book:intro:
 - HTML Template:
 
 #+BEGIN_SRC html
@@ -177,3 +177,97 @@ C. `alert`
 D. `document objecto model`
 // Control total de una página; manipulación total del contenido de la misma.
 #+END_QUOTE
+
+* Chapter 01 -- pag 31 <2026-03-05 jue> :book:chapter:
+- Coding a serious javascript application:
+
+#+BEGIN_SRC javascript
+const word = "bottles";
+let count = 99;
+
+while (count > 0) {
+  console.log(count + " " + word + " of rootbeer on the wall");
+  console.log(count + " " + word + " of rootbeer,");
+  console.log("Take one down, pass it around,");
+  count--;
+}
+if (count > 0) {
+  console.log(count + " " + word + " of rootbeer on the wall");
+} else {
+  console.log("No more " + word + " of rootbeer on the wall.");
+}
+#+END_SRC
+
+* Chapter 01 -- pag 33 <2026-03-05 jue> :book:chapter:
+#+BEGIN_SRC html
+<!DOCTYPE html>
+<html lang="eng">
+
+  <head>
+    <meta charset="utf-8">
+    <title>My First Javascript</title>
+  </head>
+
+  <body>
+    <script>
+      // index.js
+      const word = "bottles";
+      let count = 99;
+
+      while (count > 0) {
+      console.log(count + " " + word + " of rootbeer on the wall");
+      console.log(count + " " + word + " of rootbeer,");
+      console.log("Take one down, pass it around,");
+      count--;
+      }
+      if (count > 0) {
+      console.log(count + " " + word + " of rootbeer on the wall");
+      } else {
+      console.log("No more " + word + " of rootbeer on the wall.");
+      }
+    </script>
+  </body>
+
+</html>
+#+END_SRC
+
+* Chapter 01 -- pag 35 <2026-03-05 jue> :book:chapter:
+- We're going to have to seaparate you two:
+
+#+BEGIN_SRC html
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="utf-8">
+    <title>My First Javascript</title>
+</head>
+
+<body>
+    <script src="code.js">
+
+    </script>
+</body>
+
+</html>
+#+END_SRC
+
+#+BEGIN_SRC javascript
+// code.js
+const word = "bottles";
+let count = 99;
+
+while (count > 0) {
+  console.log(count + " " + word + " of rootbeer on the wall");
+  console.log(count + " " + word + " of rootbeer,");
+  console.log("Take one down, pass it around,");
+  count--;
+}
+
+if (count > 0) {
+  console.log(count + " " + word + " of rootbeer on the wall");
+} else {
+  console.log("No more " + word + " of rootbeer on the wall.");
+}
+
+#+END_SRC
