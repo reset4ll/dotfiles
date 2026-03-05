@@ -4,6 +4,7 @@
 #+BEGIN_COMMENT
 : Análisis del capítulo 01 del libro `Head First Javascript Programming, 2nd Ed.` de Oreilly.
 #+END_COMMENT
+[[./HeadJS.jpeg]]
 
 * Intro -- Pag xxxi <2026-03-04 mié> :book:intro:
 - HTML Template:
