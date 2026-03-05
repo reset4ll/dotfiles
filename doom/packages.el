@@ -13,11 +13,25 @@
 ;; To install SOME-PACKAGE from MELPA, ELPA or emacsmirror:
 ;; (package! some-package)
 
+;; Denote packages
+(package! denote)
+(package! denote-menu)
+(package! denote-org)
+(package! denote-agenda)
+(package! denote-markdown)
+(package! denote-explore)
+(package! denote-refs)
+(package! denote-regexp)
+(package! denote-journal)
+(package! denote-journal-capture)
+(package! denote-review)
+(package! denote-search)
+
 ;; Org-roam packages
-(package! org-roam)
-(package! emacsql)
-(package! magit-section)
-(package! sqlite3)
+;;(package! org-roam)
+;;(package! emacsql)
+;;(package! magit-section)
+;;(package! sqlite3)
 
 ;; Org-mode bullets -- Pretify lists in org-mode
 (package! org-superstar)

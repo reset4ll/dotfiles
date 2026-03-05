@@ -30,6 +30,9 @@
   :hook (org-mode . org-superstar-mode)
   :config
   (setq org-superstar-headline-bullets-list '("◉" "○" "●" "◆" "•")))
+  
+;; set denote default directory
+(setq denote-directory (expand-file-name "~/org/denotes/"))
 
 ;;
 ;; If you or Emacs can't find your font, use 'M-x describe-font' to look them
