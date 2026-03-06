@@ -1,0 +1,273 @@
+#+TITLE: HeadJS-ch01.org
+#+DATE: <2026-03-04 mié>
+#+STARTUP: fold indent inlineimages
+#+BEGIN_COMMENT
+: Análisis del capítulo 01 del libro `Head First Javascript Programming, 2nd Ed.` de Oreilly.
+#+END_COMMENT
+
+
+[[./HeadJS.jpg]]
+
+
+* Itro -- Pag xxxi <2026-03-04 mié> :book:intro:
+- HTML Template:
+
+#+BEGIN_SRC html
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="utf-8">
+        <title>Your HTML Page</title>
+        <script>
+             <-------  [JS CODE, HERE]
+        </script>
+    </head>
+    <body>
+        <------------  [WEB CONTENT, HERE]
+    </body>
+</html>
+#+END_SRC
+
+* Chapter 01 -- Pag 06 <2026-03-04 mié> :book:chapter:
+- Look how easy it is to write Javascript:
+
+#+BEGIN_SRC javascript
+let price = 28.99;
+// Crea una variable llamada `price` y le asigna el valor de `28.99`
+
+let discount = 10;
+// Crea una variable llamada `discount` y le asigna el valor de `10`
+
+let total = price - (price * (discount / 100));
+// Crea una variable llamada `total` y le asigna el valor del resultado afectado por la expresión.
+
+if (total > 25) { freeShipping(); }
+// Expresión condicional en donde se aplica la función si el valor de `total` es superior a `25`
+
+let count = 10;
+while (count > 0) {
+    juggle();
+    count = count - 1; // count--;
+}
+// Crea una variable `count` y le asigna el valor de `10`. Mientras el valor de dicha variable sea superior a `0` se le aplica la función `juggle()` y decrementa el valor de la variable una unidad.
+
+const dog = {name: "Rover", weight: 35};
+if (dog.weight > 30) {
+    alert("WOOF WOOF");
+} else {
+    alert("woof, woof");
+}
+// Crea una variable de tipo constante llamada `dog` con dos propiedades: `name` y `weight`. Si `weight` es mayor de `30` emite una alerta en mayúsculas, de lo contrario, emite otra en minúsculas.
+
+let circleRadius = 20;
+let circleArea = Math.PI * (circleRadius * circleRadius);
+// Crea la variable `circleRadius` y le asigna el valor de `20` y otra variable `circleArea` a la que le asigna el valor del resultado de la expresión `PI` que contiene la biblioteca de Javascript `Math` con el valor de `circleRadius` elevado al cuadrado.
+#+END_SRC
+
+* Chapter 01 -- pag 13 <2026-03-04 mié> :book:chapter:
+- Sharpen your pencil: Identificar las declaraciones de abajo que sean las más idóneas para `let y`const`.
+
+#+BEGIN_SRC javascript
+const DISTANCE_TO_MOON = 238_900;
+
+let last_guess = 0;
+
+const SCREE_WIDTH = 100;
+
+const firstUSPresident = "Washington";
+
+let fluxCapacitorReading = "System Normal";
+#+END_SRC
+
+* Chapter 01 -- pag 15 <2026-03-04 mié> :book:chapter:
+- Be the browser: Debajo se encuentran expresiones de código Javascript con algunos errores en él. Simulando ser el navegador, encontrar los erroes dentro del código.
+
+#+BEGIN_SRC javascript
+// (A) Test for jokes
+const joke = "Javascript walked into a bar..."; // Ok
+
+// let toldJoke = "false";
+let toldJoke = false;
+
+// let $punchline = "Better watch out for those semi-colons.";
+let $punchline = "Better watch out for those semi-colons.";   // `let punchline...` -- Mejor sin '$', es usado para bibliotecas.
+
+// let %entage = 20;
+let entage = 20;
+
+// let result
+let result;
+
+if (toldJoke == true) {
+    Alert($punchline); // error -> `alert(punchline);` (sin el símbolo `$`)
+} else {
+    alert(joke);
+}
+
+joke = "Knock, knock... "; // error, joke es `const`
+
+// (B) Movie Night
+// let zip code = 98104;
+let zipCode = 98104; // También `let zip_code = 98104;`
+
+// const joesFavoriteMovie = Forbidden Planet;
+const joesFavoriteMovie = "Forbidden Planet";
+
+let movieTicket$   =   9; // Ok, pero mejor `let movieTicket = 9;`
+
+if (movieTicket$ >= 9) {  // Ok
+    alert("Too much!");
+} else {
+    alert("We're going to see " + joesFavoriteMovie);
+}
+#+END_SRC
+
+* Chapter 01 -- pag 18 <2026-03-04 mié> :book:chapter:
+- Sharpen your pencil: Para cada expresión de abajo, computar su valor y escribir las respuestas.
+
+#+BEGIN_SRC javascript
+(9 / 5) * temp + 32
+// Si `temp` tiene el valor de 10, el resultado de la expresión es 50.
+
+color == "orange"
+// Si `color` tiene el valor "pink" -> `false` y si tiene el valor "orange" se avalua a `true`
+
+yourLevel > 5
+// Si `yourLevel` es 2 -> false; si `yourLevel` es 5 -> false; si `yourLevel` es 7 -> true;
+
+(level * points) + bonus
+// Si `level` es 5, `points` es 30000 y `bonus` es 3300 el valor es 153300
+
+color != " orange"
+// Si la variable `color` tiene el valor `pink` se evalua a `true`
+
+1000 + "108"
+// Se evalua a `1000108` por concatenación
+
+#+END_SRC
+
+* Chapter 01 -- pag 26 <2026-03-04 mié> :book:chapter:
+- Code magnets: Ordenar las expresiones para que den lugar a la salida que se muestra.
+
+#+BEGIN_SRC javascript
+let i = 0;
+const name = "Joe";
+
+while (i < 2) {
+  console.log("Happy Birthday to you.");
+  i++;   // i = i + 1;
+}
+console.log("Happy Birthday dear " + name + ",");
+console.log("Happy Birthay to you.");
+#+END_SRC
+
+* Chapter 01 -- pag 28 <2026-03-04 mié> :book:chapter:
+- Who does what?: Relacionar los métodos de comunicación entre el usuario y la página web.
+
+#+BEGIN_QUOTE
+A. `document.write`
+// Insertar algo de texto y código HTML en un documento. Desfasado.
+
+B. `console.log`
+// Para propósitos de depuración. Se puede escribir información en una consola especial del programador.
+
+C. `alert`
+// Método de avisar al usuario de algún evento teniendo éste que darse por avisado tecleando Ok.
+
+D. `document objecto model`
+// Control total de una página; manipulación total del contenido de la misma.
+#+END_QUOTE
+
+* Chapter 01 -- pag 31 <2026-03-05 jue> :book:chapter:
+- Coding a serious javascript application:
+
+#+BEGIN_SRC javascript
+const word = "bottles";
+let count = 99;
+
+while (count > 0) {
+  console.log(count + " " + word + " of rootbeer on the wall");
+  console.log(count + " " + word + " of rootbeer,");
+  console.log("Take one down, pass it around,");
+  count--;
+}
+if (count > 0) {
+  console.log(count + " " + word + " of rootbeer on the wall");
+} else {
+  console.log("No more " + word + " of rootbeer on the wall.");
+}
+#+END_SRC
+
+* Chapter 01 -- pag 33 <2026-03-05 jue> :book:chapter:
+#+BEGIN_SRC html
+<!DOCTYPE html>
+<html lang="eng">
+
+  <head>
+    <meta charset="utf-8">
+    <title>My First Javascript</title>
+  </head>
+
+  <body>
+    <script>
+      // index.js
+      const word = "bottles";
+      let count = 99;
+
+      while (count > 0) {
+      console.log(count + " " + word + " of rootbeer on the wall");
+      console.log(count + " " + word + " of rootbeer,");
+      console.log("Take one down, pass it around,");
+      count--;
+      }
+      if (count > 0) {
+      console.log(count + " " + word + " of rootbeer on the wall");
+      } else {
+      console.log("No more " + word + " of rootbeer on the wall.");
+      }
+    </script>
+  </body>
+
+</html>
+#+END_SRC
+
+* Chapter 01 -- pag 35 <2026-03-05 jue> :book:chapter:
+- We're going to have to seaparate you two:
+
+#+BEGIN_SRC html
+<!DOCTYPE html>
+<html lang="eng">
+
+<head>
+    <meta charset="utf-8">
+    <title>My First Javascript</title>
+</head>
+
+<body>
+    <script src="code.js">
+
+    </script>
+</body>
+
+</html>
+#+END_SRC
+
+#+BEGIN_SRC javascript
+// code.js
+const word = "bottles";
+let count = 99;
+
+while (count > 0) {
+  console.log(count + " " + word + " of rootbeer on the wall");
+  console.log(count + " " + word + " of rootbeer,");
+  console.log("Take one down, pass it around,");
+  count--;
+}
+
+if (count > 0) {
+  console.log(count + " " + word + " of rootbeer on the wall");
+} else {
+  console.log("No more " + word + " of rootbeer on the wall.");
+}
+
+#+END_SRC
