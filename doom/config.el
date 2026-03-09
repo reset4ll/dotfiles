@@ -21,7 +21,8 @@
 ;; See 'C-h v doom-font' for documentation and more examples of what they
 ;; accept. For example:
 ;;
-(setq doom-font (font-spec :family "Fira Code" :size 21 :weight 'regular)
+;;(setq doom-font (font-spec :family "Fira Code" :size 21 :weight 'regular)
+(setq doom-font (font-spec :family "JetBrainsMono" :size 21 :weight 'regular)
       doom-variable-pitch-font (font-spec :family "Noto Sans" :size 14)
       doom-symbol-font (font-spec :family "Symbola"))
 
@@ -58,12 +59,11 @@
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/org/")
 
-
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `with-eval-after-load' block, otherwise Doom's defaults may override your
 ;; settings. E.g.
 ;;
-;;   (with-eval-after-load 'PACKAGE
+;;   (with-eval-after-load 'PACKAGEq
 ;;     (setq x y))
 ;;
 ;; The exceptions to this rule:
