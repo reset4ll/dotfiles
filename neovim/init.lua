@@ -208,7 +208,11 @@ require('lazy').setup({
   {
   'habamax/vim-asciidoctor'
   },
-   -- Code-dark Theme
+   -- Carbonfox theme
+  --{
+  --'ss77a/carbonfox.nvim'
+  --}, 
+   -- Vim-code-dark Theme
   {
   'tomasiser/vim-code-dark'
   },
@@ -983,11 +987,11 @@ require('lazy').setup({
 -- -- Load the colorscheme
 -- require('nord').set()
 
--- Set colorscheme 'habamax'
--- vim.cmd("colorscheme codedark")
+-- Set colorscheme 'codedark'
+vim.cmd("colorscheme codedark")
 
 -- Set colorscheme 'onedark'
-require('onedark').load()
+-- require('onedark').load()
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
