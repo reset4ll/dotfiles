@@ -1,5 +1,5 @@
 # theme = "dark_plus"
-theme = "/home/aesteban/.config/helix/runtime/themes/carbonfox"
+theme = "~/.config/helix/runtime/themes/carbonfox"
 
 [keys.normal]
 G = "goto_file_end" # vim
