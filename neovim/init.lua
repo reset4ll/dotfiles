@@ -208,14 +208,23 @@ require('lazy').setup({
   {
   'habamax/vim-asciidoctor'
   },
+  
    -- Carbonfox theme
   --{
   --'ss77a/carbonfox.nvim'
   --}, 
+  
    -- Vim-code-dark Theme
-  {
-  'tomasiser/vim-code-dark'
-  },
+  --{
+  --'tomasiser/vim-code-dark'
+  --},
+  
+    -- Kanso theme
+    {
+    'webhooked/kanso.nvim',
+     lazy = false,
+     priority = 1000,
+    },
    
   -- Claude AI
   -- Prerequisito: `npm install -g @anthropic-ai/claude-code`
@@ -988,7 +997,10 @@ require('lazy').setup({
 -- require('nord').set()
 
 -- Set colorscheme 'codedark'
-vim.cmd("colorscheme codedark")
+-- vim.cmd("colorscheme codedark")
+
+-- Set colorscheme 'kanso'
+vim.cmd("colorscheme kanso")
 
 -- Set colorscheme 'onedark'
 -- require('onedark').load()
