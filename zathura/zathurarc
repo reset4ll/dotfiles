@@ -40,12 +40,13 @@ set default-bg "#222222"
 set font "Fira code Retina 14"
 set smooth-scroll true
 set scroll-page-aware true
-set scroll-step 50
+set scroll-step 40
+set scroll-wrap false
 
 set recolor true
 set render-loading false
 set adjust-open best-fit
-set page-padding 1
+set page-padding 0
 set statusbar-h-padding 0
 set statusbar-v-padding 0
 
