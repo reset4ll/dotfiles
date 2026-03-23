@@ -225,6 +225,12 @@ require('lazy').setup({
      lazy = false,
      priority = 1000,
     },
+    
+    -- trim spaces
+    {
+    'cappyzawa/trim.nvim',
+     opts = {}
+    },
    
   -- Claude AI
   -- Prerequisito: `npm install -g @anthropic-ai/claude-code`
@@ -581,6 +587,19 @@ require('lazy').setup({
                 vim.lsp.buf.clear_references()
                 vim.api.nvim_clear_autocmds { group = 'kickstart-lsp-highlight', buffer = event2.buf }
               end,
+            })
+                       
+            -- Eliminar espacios fin de linea  y lineas vacias al final del archivo
+            vim.api.nvim_create_autocmd("BufWritePre", {
+            pattern = "*",
+            callback = function()
+            local pos = vim.api.nvim_win_get_cursor(0)
+            -- Espacios al final de línea
+            vim.cmd([[%s/\s\+$//e]])
+            -- Líneas vacías al final del archivo
+            vim.cmd([[%s/\n\+\%$//e]])
+            vim.api.nvim_win_set_cursor(0, pos)
+            end,
             })
           end
 
