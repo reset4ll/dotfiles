@@ -219,9 +219,9 @@ require('lazy').setup({
   --'tomasiser/vim-code-dark'
   --},
   
-    -- Vim-monocrome theme
+    -- Kanso theme
     {
-    'fxn/vim-monochrome',
+    'webhooked/kanso.nvim',
      lazy = false,
      priority = 1000,
     },
@@ -999,9 +999,8 @@ require('lazy').setup({
 -- Set colorscheme 'codedark'
 -- vim.cmd("colorscheme codedark")
 
--- Set colorscheme 'vim-monocrome'
-vim.g.monochrome_italic_comments = true
-vim.cmd ("colorscheme monochrome")
+-- Set colorscheme 'kanso'
+vim.cmd("colorscheme kanso")
 
 -- Set colorscheme 'onedark'
 -- require('onedark').load()
