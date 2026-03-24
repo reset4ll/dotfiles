@@ -36,6 +36,15 @@
 ;; Org-mode bullets -- Pretify lists in org-mode
 (package! org-superstar)
 
+;; A minor mode to trim trailing whitespace and newlines
+(package! trimspace-mode)
+
+;; Load monochrome-theme
+;;(package! monochrome-theme)
+
+;; Load modus-themes
+(package! modus-themes)
+
 ;; autosync db
 ;;(org-roam-db-autosync-mode)
 
