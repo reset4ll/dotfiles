@@ -220,11 +220,11 @@ require('lazy').setup({
   --},
   
     -- Vim-monocrome theme
-    {
-    'fxn/vim-monochrome',
-     lazy = false,
-     priority = 1000,
-    },
+    --{
+    --'fxn/vim-monochrome',
+    -- lazy = false,
+    -- priority = 1000,
+   -- },
     
     -- trim spaces
     {
@@ -589,7 +589,7 @@ require('lazy').setup({
               end,
             })
                        
-            -- Eliminar espacios fin de linea  y lineas vacias al final del archivo
+            -- Eliminar espacios fin de linea y lineas vacias al final del archivo
             vim.api.nvim_create_autocmd("BufWritePre", {
             pattern = "*",
             callback = function()
@@ -865,27 +865,27 @@ require('lazy').setup({
     },
   },
 
-  --{ -- You can easily change to a different colorscheme.
+  { -- You can easily change to a different colorscheme.
     -- Change the name of the colorscheme plugin below, and then
     -- change the command in the config to whatever the name of that colorscheme is.
     --
     -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
-   -- 'folke/tokyonight.nvim',
-   -- priority = 1000, -- Make sure to load this before all the other start plugins.
-   -- config = function()
-   --  ---@diagnostic disable-next-line: missing-fields
-      --require('tokyonight').setup {
-        --styles = {
-          --comments = { italic = true }, -- Disable italics in comments
-        --},
-      --}
+    'folke/tokyonight.nvim',
+    priority = 1000, -- Make sure to load this before all the other start plugins.
+    config = function()
+     ---@diagnostic disable-next-line: missing-fields
+      require('tokyonight').setup {
+        styles = {
+          comments = { italic = true }, -- Disable italics in comments
+        },
+      }
 
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-         --vim.cmd.colorscheme 'tokyonight'
-    --end,
-  --},
+         vim.cmd.colorscheme 'tokyonight'
+    end,
+  },
    
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
@@ -979,8 +979,10 @@ require('lazy').setup({
   -- Or use telescope!
   -- In normal mode type `<space>sh` then write `lazy.nvim-plugin`
   -- you can continue same window with `<space>sr` which resumes last telescope search
-}, {
-  ui = {
+}, 
+
+  {
+    ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
     -- default lazy.nvim defined Nerd Font icons, otherwise define a unicode icons table
     icons = vim.g.have_nerd_font and {} or {
@@ -1019,8 +1021,8 @@ require('lazy').setup({
 -- vim.cmd("colorscheme codedark")
 
 -- Set colorscheme 'vim-monocrome'
-vim.g.monochrome_italic_comments = true
-vim.cmd ("colorscheme monochrome")
+--vim.g.monochrome_italic_comments = true
+--vim.cmd ("colorscheme monochrome")
 
 -- Set colorscheme 'onedark'
 -- require('onedark').load()
