@@ -23,7 +23,7 @@
 ;;
 ;;(setq doom-font (font-spec :family "Fira Code" :size 21 :weight 'regular)
 (setq doom-font (font-spec :family "JetBrainsMono" :size 21 :weight 'regular)
-      doom-variable-pitch-font (font-spec :family "Noto Sans" :size 14)
+      doom-variable-pitch-font (font-spec :family "Noto Sans" :size 13)
       doom-symbol-font (font-spec :family "Symbola"))
 
 ;; Deshabilitar negrita globalmente
@@ -48,10 +48,9 @@
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
 ;;(setq load-theme 'oxocarbon-theme)
-;;(setq doom-theme 'doom-nord)
-(setq load-theme 'modus-vivendi)
-(mapc #'disable-theme custom-enabled-themes)
-(setq load-theme 'modus-vivendi)
+;;(mapc #'disable-theme custom-enabled-themes)
+;;(setq load-theme 'modus-vivendi)
+(setq doom-theme 'doom-tokyo-night)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -66,7 +65,7 @@
 ;; `with-eval-after-load' block, otherwise Doom's defaults may override your
 ;; settings. E.g.
 ;;
-;;   (with-eval-after-load 'PACKAGEq
+;;   (with-eval-after-load 'PACKAGE
 ;;     (setq x y))
 ;;
 ;; The exceptions to this rule:
