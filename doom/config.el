@@ -22,7 +22,7 @@
 ;; accept. For example:
 ;;
 ;;(setq doom-font (font-spec :family "Fira Code" :size 21 :weight 'regular)
-(setq doom-font (font-spec :family "JetBrainsMono" :size 21 :weight 'regular)
+(setq doom-font (font-spec :family "JetBrainsMono" :size 19 :weight 'regular)
       doom-variable-pitch-font (font-spec :family "Noto Sans" :size 13)
       doom-symbol-font (font-spec :family "Symbola"))
 
@@ -60,6 +60,13 @@
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
 (setq org-directory "~/org/")
+
+;; Babel settings 
+(after! org
+  (org-babel-do-load-languages
+   'org-babel-load-languages
+   '((C . t)
+     (python . t))))
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `with-eval-after-load' block, otherwise Doom's defaults may override your
