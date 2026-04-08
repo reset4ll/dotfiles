@@ -87,8 +87,8 @@ Plug 'xolox/vim-misc'
 Plug 'xolox/vim-session'
 
 "" Snippets
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
+""Plug 'SirVer/ultisnips'
+""Plug 'honza/vim-snippets'
 
 "*****************************************************************************
 "" Custom bundles
@@ -288,7 +288,7 @@ if exists("*fugitive#statusline")
 endif
 
 " vim-airline
-let g:airline_theme = 'luna'
+let g:airline_theme = 'owo'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
@@ -535,6 +535,10 @@ nnoremap <Leader>o :.Gbrowse<CR>
 autocmd FileType c setlocal tabstop=4 shiftwidth=4 expandtab
 autocmd FileType cpp setlocal tabstop=4 shiftwidth=4 expandtab
 
+" *************************
+"  Clean Regs.
+"**************************
+command! ClearRegs for r in 'abcdefghijklmnopqrstuvwxyz/:+*' | let @r = "" | endfor | echo "✅ Registros borrados"
 
 
 "*****************************************************************************
