@@ -92,7 +92,8 @@ dynamic_title = true
 x = 6
 y = 6
 
-[keyboard]
+[selection]
+save_to_clipboard = true
 
 
 
