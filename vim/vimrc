@@ -65,10 +65,10 @@ Plug 'cofyc/vim-uncrustify'
 Plug 'vim-scripts/indentpython.vim'
 "Plug 'kyoz/purify', { 'rtp': 'vim' }
 "Plug 'morhetz/gruvbox'
-Plug 'joshdick/onedark.vim'
+"Plug 'joshdick/onedark.vim'
 "Plug 'sainnhe/gruvbox-material'
 "Plug 'tomasiser/vim-code-dark'
-
+Plug 'ghifarit53/tokyonight-vim'
 
 if isdirectory('/usr/local/opt/fzf')
   Plug '/usr/local/opt/fzf' | Plug 'junegunn/fzf.vim'
@@ -176,7 +176,18 @@ set background=dark
 "" ================
 
 " Load the colorscheme
-colorscheme onedark
+" colorscheme onedark
+
+"" ================
+""    Tokyo-night
+"" ================
+
+set termguicolors
+
+let g:tokyonight_style = 'night' " available: night, storm
+let g:tokyonight_enable_italic = 1
+
+colorscheme tokyonight
 
 "+++++++++++++++++++++++++++
 " Cambia ESC to CapsLock Key
@@ -288,7 +299,7 @@ if exists("*fugitive#statusline")
 endif
 
 " vim-airline
-let g:airline_theme = 'owo'
+let g:airline_theme = 'tokyonight'
 let g:airline#extensions#branch#enabled = 1
 let g:airline#extensions#ale#enabled = 1
 let g:airline#extensions#tabline#enabled = 1
