@@ -67,6 +67,16 @@
    'org-babel-load-languages
    '((C . t)
      (python . t))))
+     
+;; === DAP-MODE ===
+;; Dap-mode settings [C/C++]
+(after! dap-mode
+  (require 'dap-gdb))
+   
+;; Dap mode seetings [python]
+(after! dap-mode
+  (require 'dap-python)
+  (setq dap-python-debugger 'debugpy))
 
 ;; Whenever you reconfigure a package, make sure to wrap your config in an
 ;; `with-eval-after-load' block, otherwise Doom's defaults may override your

@@ -42,6 +42,9 @@
 ;; Load monochrome-theme
 ;;(package! monochrome-theme)
 
+;; Load dap-mode
+(package! dap-mode)
+
 ;; Load modus-themes
 ;;(package! modus-themes)
 
