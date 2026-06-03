@@ -58,9 +58,9 @@ vim.o.splitright = true
 vim.o.splitbelow = true
 
 -- Enable tabs to 4 spaces
-vim.o.tabstop = 4       -- Número de espacios que un tab ocupa
-vim.o.shiftwidth = 4     -- Número de espacios para el auto-indentado
-vim.o.expandtab = true   -- Convierte tabulaciones en espacios
+vim.o.tabstop = 4 -- Número de espacios que un tab ocupa
+vim.o.shiftwidth = 4 -- Número de espacios para el auto-indentado
+vim.o.expandtab = true -- Convierte tabulaciones en espacios
 
 -- Sets how neovim will display certain whitespace characters in the editor.
 --  See `:help 'list'`
@@ -104,6 +104,14 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 -- NOTE: This won't work in all terminal emulators/tmux/etc. Try your own mapping
 -- or just use <C-\><C-n> to exit terminal mode
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
+
+-- clang-format map
+vim.api.nvim_create_autocmd("BufWritePre", {
+  pattern = { "*.c", "*.h", "*.cpp", "*.hpp" },
+  callback = function()
+    vim.lsp.buf.format()
+  end,
+})
 
 -- TIP: Disable arrow keys in normal mode
 -- vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
@@ -204,34 +212,34 @@ require('lazy').setup({
       },
     },
   },
-   -- Asciidoc plugin
+  -- Asciidoc plugin
   {
-  'habamax/vim-asciidoctor'
+    'habamax/vim-asciidoctor',
   },
-  
-   -- Carbonfox theme
+
+  -- Carbonfox theme
   --{
   --'ss77a/carbonfox.nvim'
-  --}, 
-  
-   -- Vim-code-dark Theme
+  --},
+
+  -- Vim-code-dark Theme
   --{
   --'tomasiser/vim-code-dark'
   --},
-  
-    -- Vim-monocrome theme
-    --{
-    --'fxn/vim-monochrome',
-    -- lazy = false,
-    -- priority = 1000,
-   -- },
-    
-    -- trim spaces
-    {
+
+  -- Vim-monocrome theme
+  --{
+  --'fxn/vim-monochrome',
+  -- lazy = false,
+  -- priority = 1000,
+  -- },
+
+  -- trim spaces
+  {
     'cappyzawa/trim.nvim',
-     opts = {}
-    },
-   
+    opts = {},
+  },
+
   -- Claude AI
   -- Prerequisito: `npm install -g @anthropic-ai/claude-code`
   --{
@@ -239,25 +247,25 @@ require('lazy').setup({
   --dependencies = { "folke/snacks.nvim" },
   --config = true,
   --keys = {
-    --{ "<leader>ac", "<cmd>ClaudeCode<cr>",       desc = "Toggle Claude" },
-    --{ "<leader>af", "<cmd>ClaudeCodeFocus<cr>",  desc = "Focus Claude" },
-    --{ "<leader>ab", "<cmd>ClaudeCodeAdd %<cr>",  desc = "Add buffer actual" },
-    --{ "<leader>as", "<cmd>ClaudeCodeSend<cr>",   mode = "v", desc = "Enviar selección" },
-    --{ "<leader>aa", "<cmd>ClaudeCodeDiffAccept<cr>", desc = "Aceptar diff" },
-    --{ "<leader>ad", "<cmd>ClaudeCodeDiffDeny<cr>",   desc = "Rechazar diff" },
+  --{ "<leader>ac", "<cmd>ClaudeCode<cr>",       desc = "Toggle Claude" },
+  --{ "<leader>af", "<cmd>ClaudeCodeFocus<cr>",  desc = "Focus Claude" },
+  --{ "<leader>ab", "<cmd>ClaudeCodeAdd %<cr>",  desc = "Add buffer actual" },
+  --{ "<leader>as", "<cmd>ClaudeCodeSend<cr>",   mode = "v", desc = "Enviar selección" },
+  --{ "<leader>aa", "<cmd>ClaudeCodeDiffAccept<cr>", desc = "Aceptar diff" },
+  --{ "<leader>ad", "<cmd>ClaudeCodeDiffDeny<cr>",   desc = "Rechazar diff" },
   --},
---},
+  --},
   -- Org-mode plugin settings
   {
-  'nvim-orgmode/orgmode',
-  event = 'VeryLazy',
-  ft = { 'org' },
-  config = function()
-    require('orgmode').setup({
-      org_agenda_files = '~/orgfiles/**/*',
-      org_default_notes_file = '~/orgfiles/refile.org',
-    })
-  end,
+    'nvim-orgmode/orgmode',
+    event = 'VeryLazy',
+    ft = { 'org' },
+    config = function()
+      require('orgmode').setup {
+        org_agenda_files = '~/orgfiles/**/*',
+        org_default_notes_file = '~/orgfiles/refile.org',
+      }
+    end,
   },
 
   -- NOTE: Plugins can also be configured to run Lua code when they are loaded.
@@ -588,18 +596,18 @@ require('lazy').setup({
                 vim.api.nvim_clear_autocmds { group = 'kickstart-lsp-highlight', buffer = event2.buf }
               end,
             })
-                       
+
             -- Eliminar espacios fin de linea y lineas vacias al final del archivo
-            vim.api.nvim_create_autocmd("BufWritePre", {
-            pattern = "*",
-            callback = function()
-            local pos = vim.api.nvim_win_get_cursor(0)
-            -- Espacios al final de línea
-            vim.cmd([[%s/\s\+$//e]])
-            -- Líneas vacías al final del archivo
-            vim.cmd([[%s/\n\+\%$//e]])
-            vim.api.nvim_win_set_cursor(0, pos)
-            end,
+            vim.api.nvim_create_autocmd('BufWritePre', {
+              pattern = '*',
+              callback = function()
+                local pos = vim.api.nvim_win_get_cursor(0)
+                -- Espacios al final de línea
+                vim.cmd [[%s/\s\+$//e]]
+                -- Líneas vacías al final del archivo
+                vim.cmd [[%s/\n\+\%$//e]]
+                vim.api.nvim_win_set_cursor(0, pos)
+              end,
             })
           end
 
@@ -758,10 +766,10 @@ require('lazy').setup({
       formatters_by_ft = {
         lua = { 'stylua' },
         -- Conform can also run multiple formatters sequentially
-        python = { "isort", "black" },
+        python = { 'isort', 'black' },
         --
         -- You can use 'stop_after_first' to run the first available formatter from the list
-        javascript = { "prettierd", "prettier", stop_after_first = true },
+        javascript = { 'prettierd', 'prettier', stop_after_first = true },
       },
     },
   },
@@ -873,7 +881,7 @@ require('lazy').setup({
     'folke/tokyonight.nvim',
     priority = 1000, -- Make sure to load this before all the other start plugins.
     config = function()
-     ---@diagnostic disable-next-line: missing-fields
+      ---@diagnostic disable-next-line: missing-fields
       require('tokyonight').setup {
         styles = {
           comments = { italic = true }, -- Disable italics in comments
@@ -883,10 +891,10 @@ require('lazy').setup({
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-         vim.cmd.colorscheme 'tokyonight'
+      vim.cmd.colorscheme 'tokyonight'
     end,
   },
-   
+
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
 
@@ -933,7 +941,7 @@ require('lazy').setup({
     --main = 'nvim-treesitter.configs', -- Sets main module to use for opts
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
     opts = {
-      ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' },
+      ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'python', 'markdown_inline', 'query', 'vim', 'vimdoc' },
       -- Autoinstall languages that are not installed
       auto_install = true,
       highlight = {
@@ -979,10 +987,8 @@ require('lazy').setup({
   -- Or use telescope!
   -- In normal mode type `<space>sh` then write `lazy.nvim-plugin`
   -- you can continue same window with `<space>sr` which resumes last telescope search
-}, 
-
-  {
-    ui = {
+}, {
+  ui = {
     -- If you are using a Nerd Font: set icons to an empty table which will use the
     -- default lazy.nvim defined Nerd Font icons, otherwise define a unicode icons table
     icons = vim.g.have_nerd_font and {} or {
